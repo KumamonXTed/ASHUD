@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         
         
-        ASTimeUtils.delay(1){
+        _ = ASTimeUtils.delay(time: 1){
             self.showHUD()
         }
     }
@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func showHUD() {
         // a Large HUD with Dark style in the Center of screen
-        ASHUD.sharedHUD.showHUD("Center Large Dark",delayTime:3,position:.Center,size:.Large,style:.Dark,bordered:false)
+        ASHUD.sharedHUD.showHUD(msg: "Center Large Dark",delayTime:3,position:.Center,size:.Large,style:.Dark,bordered:false)
         
         // a Medium HUD with Border and Dark style in the Bottom of screen
 //        ASHUD.sharedHUD.showHUD("Bottom Medium Dark Border",delayTime:3,position:.Bottom,size:.Medium,style:.Dark,bordered:true)
